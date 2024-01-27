@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+:root {
+  /* Primary Color */
+  --Green: hsl(75, 94%, 57%);
+  /* Natural Colors */
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --Dark-Grey: hsl(0, 0%, 12%);
+  --Off-Black: hsl(0, 0%, 8%);
+  /* font-weights */
+  --regular: 400;
+  --semi-bold: 600;
+  --bold: 700;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+body {
+  min-height: 100vh;
+  color: var(--White);
+  position: relative;
+  background-color: var(--Off-Black);
+}
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--Dark-Grey);
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 2px 30px hsla(0, 0%, 8%, 0.3);
+  border-radius: 8px;
+}
+.box .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.box .profile img {
+  border-radius: 50%;
+  height: auto;
+  background-size: cover;
+  width: 80px;
+  margin: 25px 0;
+}
+.box .profile h2 {
+  font-weight: var(--semi-bold);
+  margin-bottom: 15px;
+}
+.box .profile h4 {
+  color: var(--Green);
+  font-weight: var(--semi-bold);
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.box .profile p {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.box .social-media button {
+  padding: 10px;
+  display: block;
+  margin: 0 auto 10px;
+  width: 100%;
+  background-color: var(--Grey);
+  border: none;
+  border-radius: 6px;
+  font-weight: var(--bold);
+  color: white;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.box .social-media button:hover {
+  color: var(--Off-Black);
+  background-color: var(--Green);
+}
+@media screen and (max-width: 375px) {
+  .box {
+    width: 300px;
+  }
+
+  .box .profile h4 {
+    font-size: 10px;
+  }
+  .box .profile p {
+    font-size: 12px;
+  }
+}
